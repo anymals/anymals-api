@@ -17,7 +17,9 @@ folders.forEach(folder => {
 
 const server = new GraphQLServer({schema: mergeSchemas({schemas})});
 createTypeOrmConn().then(() => {
+    server.express.get("/rest",(_req,_res)=> _res.send('Rest end-point'));
     server.start({port: process.env.NODE_ENV === "test" ? 4001 : 4000}).then(() => {
         console.log("Server running ...")
     });
 });
+

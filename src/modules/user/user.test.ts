@@ -1,15 +1,15 @@
 import {request} from "graphql-request";
-
 import {User} from "../../entity/User";
 import {createTypeOrmConn} from "../../utils/createTypeOrmConn";
 import {test_host} from "./constants";
+
 
 beforeAll(async () => {
     await createTypeOrmConn();
 });
 
 const email = "tom@bob.com";
-const password = "jalksdf";
+const password = "12345678";
 
 const mutation = `
 mutation {
