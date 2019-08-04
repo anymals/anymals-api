@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://boss:kittykitty@10.0.0.106:5432/anymals
+  postgres:
+    image: postgres:9.6.2-alpine
+    environment:
+      POSTGRES_USER: todoapp
+      POSTGRES_DB: todos

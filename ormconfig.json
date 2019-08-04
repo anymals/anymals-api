@@ -2,7 +2,7 @@
   {
     "name": "development",
     "type": "postgres",
-    "host": "localhost",
+    "host": "10.0.0.106",
     "port": 5432,
     "username": "boss",
     "password": "kittykitty",
@@ -27,7 +27,7 @@
   {
     "name": "test",
     "type": "postgres",
-    "host": "localhost",
+    "host": "10.0.0.106",
     "port": 5432,
     "username": "postgres",
     "password": "root",
