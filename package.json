@@ -40,6 +40,7 @@
       "test-server": "NODE_ENV=test ts-node src/server.ts",
       "ci": "start-server-and-test test-server http://localhost:4001 test"
    },
+   "license": "ISC",
    "jest": {
       "transform": {
          "^.+\\.tsx?$": "ts-jest"
